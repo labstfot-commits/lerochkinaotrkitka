@@ -1,5 +1,6 @@
 import HeroSection from '@/components/HeroSection';
 import LoveStorySection from '@/components/LoveStorySection';
+import ArtInspiration from '@/components/ArtInspiration';
 import DreamsGallery from '@/components/DreamsGallery';
 import CountdownSection from '@/components/CountdownSection';
 import LoveLetterReveal from '@/components/LoveLetterReveal';
@@ -18,6 +19,7 @@ export default function Valentine() {
       
       <HeroSection />
       <LoveStorySection />
+      <ArtInspiration />
       <DreamsGallery />
       <CountdownSection />
       <LoveLetterReveal />

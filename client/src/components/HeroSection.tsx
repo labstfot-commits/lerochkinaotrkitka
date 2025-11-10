@@ -44,26 +44,28 @@ export default function HeroSection() {
         />
       ))}
 
-      <div className="relative z-10 text-center px-4 space-y-8 animate-fade-in">
+      <div className="relative z-10 text-center px-4 space-y-6 md:space-y-8 animate-fade-in max-w-4xl mx-auto">
         <h1 
-          className="font-script text-6xl md:text-8xl text-primary animate-fade-in-up"
+          className="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary animate-fade-in-up leading-tight"
           data-testid="text-hero-title"
         >
           Для Валерии
         </h1>
         
         <p 
-          className="font-sans text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+          className="font-sans text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2"
           style={{ animationDelay: '0.3s' }}
           data-testid="text-hero-subtitle"
         >
           Расстояние — это всего лишь числа между двумя сердцами,
-          <br />которые бьются в унисон
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>
+          которые бьются в унисон
         </p>
 
         <button
           onClick={scrollToContent}
-          className="mt-12 px-8 py-4 bg-primary/90 hover-elevate active-elevate-2 text-primary-foreground rounded-full font-sans text-lg backdrop-blur-md border border-primary-border transition-all duration-300"
+          className="mt-8 md:mt-12 px-6 py-3 md:px-8 md:py-4 bg-primary/90 hover-elevate active-elevate-2 text-primary-foreground rounded-full font-sans text-base md:text-lg backdrop-blur-md border border-primary-border transition-all duration-300 shadow-lg"
           style={{ animationDelay: '0.6s' }}
           data-testid="button-start-journey"
         >

@@ -33,21 +33,21 @@ export default function CountdownSection() {
   }, []);
 
   return (
-    <section className="min-h-screen py-24 px-4 relative overflow-hidden" data-testid="section-countdown">
+    <section className="min-h-screen py-16 md:py-24 px-4 relative overflow-hidden" data-testid="section-countdown">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
       
-      <div className="relative max-w-4xl mx-auto space-y-16 text-center">
-        <div className="space-y-4 animate-fade-in">
-          <Calendar className="w-16 h-16 text-primary mx-auto animate-pulse" />
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground" data-testid="text-countdown-title">
+      <div className="relative max-w-4xl mx-auto space-y-12 md:space-y-16 text-center">
+        <div className="space-y-4 md:space-y-6 animate-fade-in">
+          <Calendar className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto animate-pulse" />
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground px-4" data-testid="text-countdown-title">
             До нашей встречи
           </h2>
-          <p className="font-sans text-xl text-muted-foreground">
+          <p className="font-sans text-lg md:text-xl text-muted-foreground px-4">
             Каждая секунда приближает нас друг к другу
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {[
             { label: 'Дней', value: timeLeft.days },
             { label: 'Часов', value: timeLeft.hours },
@@ -56,14 +56,14 @@ export default function CountdownSection() {
           ].map((item, index) => (
             <div
               key={item.label}
-              className="space-y-4 p-8 bg-card/50 backdrop-blur-sm rounded-2xl border border-card-border hover-elevate"
+              className="space-y-3 md:space-y-4 p-4 md:p-8 bg-card/50 backdrop-blur-sm rounded-2xl border border-card-border hover-elevate"
               style={{ animationDelay: `${index * 0.1}s` }}
               data-testid={`countdown-${item.label.toLowerCase()}`}
             >
-              <div className="font-serif text-5xl md:text-6xl text-primary font-bold" data-testid={`text-countdown-${item.label.toLowerCase()}`}>
+              <div className="font-serif text-4xl sm:text-5xl md:text-6xl text-primary font-bold" data-testid={`text-countdown-${item.label.toLowerCase()}`}>
                 {item.value.toString().padStart(2, '0')}
               </div>
-              <div className="font-sans text-sm text-muted-foreground uppercase tracking-wider">
+              <div className="font-sans text-xs md:text-sm text-muted-foreground uppercase tracking-wider">
                 {item.label}
               </div>
             </div>

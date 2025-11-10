@@ -47,18 +47,18 @@ const dreams = [
 
 export default function DreamsGallery() {
   return (
-    <section className="min-h-screen py-24 px-4 bg-card" data-testid="section-dreams">
-      <div className="max-w-6xl mx-auto space-y-16">
-        <div className="text-center space-y-4 animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground" data-testid="text-dreams-title">
+    <section className="min-h-screen py-16 md:py-24 px-4 bg-card" data-testid="section-dreams">
+      <div className="max-w-6xl mx-auto space-y-12 md:space-y-16">
+        <div className="text-center space-y-4 md:space-y-6 animate-fade-in">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground px-4" data-testid="text-dreams-title">
             Мечты о нашей встрече
           </h2>
-          <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Всё, о чём я думаю, представляя наше будущее вместе
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {dreams.map((dream, index) => (
             <Card
               key={dream.id}
@@ -66,7 +66,7 @@ export default function DreamsGallery() {
               style={{ animationDelay: `${index * 0.1}s` }}
               data-testid={`card-dream-${dream.id}`}
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-56 sm:h-64 overflow-hidden">
                 <img
                   src={dream.image}
                   alt={dream.title}
@@ -74,11 +74,11 @@ export default function DreamsGallery() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
               </div>
-              <div className="p-6 space-y-2">
-                <h3 className="font-serif text-2xl text-foreground" data-testid={`text-dream-title-${dream.id}`}>
+              <div className="p-5 md:p-6 space-y-2">
+                <h3 className="font-serif text-xl md:text-2xl text-foreground" data-testid={`text-dream-title-${dream.id}`}>
                   {dream.title}
                 </h3>
-                <p className="font-sans text-muted-foreground" data-testid={`text-dream-description-${dream.id}`}>
+                <p className="font-sans text-sm md:text-base text-muted-foreground" data-testid={`text-dream-description-${dream.id}`}>
                   {dream.description}
                 </p>
               </div>

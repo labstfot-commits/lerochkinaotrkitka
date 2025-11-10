@@ -6,13 +6,13 @@ export default function LoveLetterReveal() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="min-h-screen py-24 px-4 flex items-center justify-center bg-accent/20" data-testid="section-love-letter">
+    <section className="min-h-screen py-16 md:py-24 px-4 flex items-center justify-center bg-accent/20" data-testid="section-love-letter">
       <div className="max-w-2xl w-full">
-        <div className="text-center space-y-8 mb-12 animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground" data-testid="text-letter-title">
+        <div className="text-center space-y-6 md:space-y-8 mb-8 md:mb-12 animate-fade-in">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground px-4" data-testid="text-letter-title">
             Письмо для тебя
           </h2>
-          <p className="font-sans text-xl text-muted-foreground">
+          <p className="font-sans text-lg md:text-xl text-muted-foreground px-4">
             Нажми, чтобы открыть
           </p>
         </div>
@@ -26,24 +26,24 @@ export default function LoveLetterReveal() {
             data-testid="card-love-letter"
           >
             {!isOpen ? (
-              <div className="p-12 text-center space-y-6">
-                <Mail className="w-24 h-24 text-primary mx-auto animate-pulse" />
-                <p className="font-script text-3xl text-foreground">
+              <div className="p-8 md:p-12 text-center space-y-6">
+                <Mail className="w-20 h-20 md:w-24 md:h-24 text-primary mx-auto animate-pulse" />
+                <p className="font-script text-2xl md:text-3xl text-foreground">
                   Валерия
                 </p>
-                <p className="font-sans text-muted-foreground">
+                <p className="font-sans text-base md:text-lg text-muted-foreground">
                   Нажми, чтобы прочитать
                 </p>
               </div>
             ) : (
-              <div className="p-8 space-y-6 animate-fade-in" data-testid="content-letter">
+              <div className="p-6 md:p-8 space-y-6 animate-fade-in" data-testid="content-letter">
                 <div className="flex items-center justify-between">
-                  <Heart className="text-primary w-8 h-8" />
-                  <Heart className="text-primary w-8 h-8" />
+                  <Heart className="text-primary w-6 h-6 md:w-8 md:h-8" />
+                  <Heart className="text-primary w-6 h-6 md:w-8 md:h-8" />
                 </div>
                 
-                <div className="space-y-6 font-sans text-lg leading-relaxed text-foreground/90">
-                  <p className="font-script text-3xl text-primary mb-4">
+                <div className="space-y-4 md:space-y-6 font-sans text-base md:text-lg leading-relaxed text-foreground/90">
+                  <p className="font-script text-2xl md:text-3xl text-primary mb-4">
                     Моя дорогая Валерия,
                   </p>
                   
@@ -62,7 +62,7 @@ export default function LoveLetterReveal() {
                     и что каждый день я жду того момента, когда смогу увидеть твою улыбку вживую.
                   </p>
                   
-                  <p className="font-script text-2xl text-primary pt-4">
+                  <p className="font-script text-xl md:text-2xl text-primary pt-4">
                     С любовью и нетерпением,
                     <br />
                     Твой
@@ -70,8 +70,8 @@ export default function LoveLetterReveal() {
                 </div>
 
                 <div className="flex items-center justify-between pt-4">
-                  <Heart className="text-primary w-8 h-8" />
-                  <Heart className="text-primary w-8 h-8" />
+                  <Heart className="text-primary w-6 h-6 md:w-8 md:h-8" />
+                  <Heart className="text-primary w-6 h-6 md:w-8 md:h-8" />
                 </div>
               </div>
             )}
